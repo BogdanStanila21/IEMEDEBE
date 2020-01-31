@@ -163,10 +163,23 @@ StarWars.plataforma = "Cine";
 StarWars.esMCU = false;
 
 
-VengadoresEndgame.mostrarAtributosPeliculas()
+//VengadoresEndgame.mostrarAtributosPeliculas()
 
 let arayPeliculas : Iemedebe
-arayPeliculas = new Iemedebe([StarWars,Hulk,PiratasDelCaribe]);
+arayPeliculas = new Iemedebe([StarWars,Hulk,PiratasDelCaribe,TheRock]);
 
-arayPeliculas.monstrarAtributosIemedebe()
+//arayPeliculas.monstrarAtributosIemedebe()
 
+
+
+let jsonAray = JSON.stringify(arayPeliculas)
+
+const fs = require('fs');
+fs.writeFile("imdbBBDD.json", jsonAray,'utf8', function (err) {
+    if (err) {
+        console.log("An error occured while writing JSON Object to File.");
+        return console.log(err);
+    }
+ 
+    console.log("JSON file has been saved.");
+});

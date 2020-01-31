@@ -141,7 +141,16 @@ StarWars.productora = "Lucas Films";
 StarWars.distribuidora = "Walt Disney";
 StarWars.plataforma = "Cine";
 StarWars.esMCU = false;
-VengadoresEndgame.mostrarAtributosPeliculas();
+//VengadoresEndgame.mostrarAtributosPeliculas()
 var arayPeliculas;
-arayPeliculas = new Iemedebe_1.Iemedebe([StarWars, Hulk, PiratasDelCaribe]);
-arayPeliculas.monstrarAtributosIemedebe();
+arayPeliculas = new Iemedebe_1.Iemedebe([StarWars, Hulk, PiratasDelCaribe, TheRock]);
+//arayPeliculas.monstrarAtributosIemedebe()
+var jsonAray = JSON.stringify(arayPeliculas);
+var fs = require('fs');
+fs.writeFile("imdbBBDD.json", jsonAray, 'utf8', function (err) {
+    if (err) {
+        console.log("An error occured while writing JSON Object to File.");
+        return console.log(err);
+    }
+    console.log("JSON file has been saved.");
+});
