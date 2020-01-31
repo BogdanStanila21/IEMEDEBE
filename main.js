@@ -2,6 +2,7 @@
 exports.__esModule = true;
 var Profesional_1 = require("./Profesional");
 var Peliculas_1 = require("./Peliculas");
+var Iemedebe_1 = require("./Iemedebe");
 var DenzelWashigton;
 DenzelWashigton = new Profesional_1.Profesional("Dezel Washigton", 66, "Masculino", 80, 185, "negro", "Marrones", "Yorsay", false, "USA", 2, "Actor/Director");
 var RobertDowneyJr;
@@ -141,3 +142,6 @@ StarWars.distribuidora = "Walt Disney";
 StarWars.plataforma = "Cine";
 StarWars.esMCU = false;
 VengadoresEndgame.mostrarAtributosPeliculas();
+var arayPeliculas;
+arayPeliculas = new Iemedebe_1.Iemedebe([StarWars, Hulk, PiratasDelCaribe]);
+arayPeliculas.monstrarAtributosIemedebe();

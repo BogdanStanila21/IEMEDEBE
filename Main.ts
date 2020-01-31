@@ -1,5 +1,6 @@
 import {Profesional} from "./Profesional"
 import {Peliculas} from "./Peliculas"
+import {Iemedebe} from "./Iemedebe"
 
 let DenzelWashigton: Profesional
 DenzelWashigton= new Profesional("Dezel Washigton",66,"Masculino",80,185,"negro","Marrones","Yorsay",false,"USA",2,"Actor/Director")
@@ -164,5 +165,8 @@ StarWars.esMCU = false;
 
 VengadoresEndgame.mostrarAtributosPeliculas()
 
+let arayPeliculas : Iemedebe
+arayPeliculas = new Iemedebe([StarWars,Hulk,PiratasDelCaribe]);
 
+arayPeliculas.monstrarAtributosIemedebe()
 
