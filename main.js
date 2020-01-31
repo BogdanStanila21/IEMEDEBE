@@ -147,10 +147,13 @@ arayPeliculas = new Iemedebe_1.Iemedebe([StarWars, Hulk, PiratasDelCaribe, TheRo
 //arayPeliculas.monstrarAtributosIemedebe()
 var jsonAray = JSON.stringify(arayPeliculas);
 var fs = require('fs');
-fs.writeFile("imdbBBDD.json", jsonAray, 'utf8', function (err) {
+fs.writeFileSync("imdbBBDD.json", jsonAray, "utf8");
+fs.writeFileSync("juanito.txt", "Este es el fichero juanito", "utf8");
+/*fs.writeFile("imdbBBDD.json", jsonAray,'utf8', function (err) {
     if (err) {
         console.log("An error occured while writing JSON Object to File.");
         return console.log(err);
     }
+ 
     console.log("JSON file has been saved.");
-});
+});*/ 
